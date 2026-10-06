@@ -26,7 +26,7 @@ with DAG(
 
     run_math_league = DockerOperator(
         task_id='run_math_league',
-        image='gcr.io/icef-437920/math-league@sha256:5ecb40caa094eaa51722aac0a394180907fc65438b21185d312078ca5a7f0e6e',
+        image='gcr.io/icef-437920/math-league:latest',
         auto_remove=True,
         tty=True,
         force_pull=True,

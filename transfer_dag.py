@@ -35,6 +35,7 @@ with DAG(
         gcp_conn_id='google_cloud_default',  # Airflow connection ID for GCP
     )
 
+
     iready_ftp_staging = LocalFilesystemToGCSOperator(
     task_id='upload_iready_sftp_files_to_staging_bucket',
     bucket='iready_stagingbucket-icefschools-1',
@@ -52,7 +53,7 @@ with DAG(
     )
 
 upload_to_gcs_from_school_mint_enroll
-iready_ftp_staging  
-iready_diagnostic_results  # Optional: set task order if needed
+iready_ftp_staging
+iready_diagnostic_results
     
 
